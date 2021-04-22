@@ -1,4 +1,4 @@
-//import Dependencies
+//import Dependencies 
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
@@ -46,13 +46,14 @@ const middleares = [
 ];
 
 app.use(middleares);
-
+//404 error handaller
 app.use((req, res, next) => {
     let error = new Error("404 page not found");
     error.status = 404;
     next(error);
 });
 
+//error hendeler middleware
 app.use((error, req, res, next) => {
     if (error.status === 404) {
         return res.render("error/404");
