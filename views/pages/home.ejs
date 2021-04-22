@@ -1,0 +1,28 @@
+<%-include("../partials/header.ejs",{title:"Home page"})%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 mx-auto p-3">
+            <div class="card">
+                <div class="card-body">
+                    <div class="jumbotron">
+                        <h1 class="display-3">Welcome to nodeJS authentication system</h1>
+                        <p class="lead">Create an account for test</p>
+                        <hr class="my-2" />
+                        <p class="lead">
+                            <a class="btn btn-primary btn-lg" href="/auth/register" role="button"
+                                >Register</a
+                            >
+
+                            <a class="btn btn-primary btn-lg" href="/auth/login" role="button"
+                                >Login</a
+                            >
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%-include("../partials/footer.ejs")%>
