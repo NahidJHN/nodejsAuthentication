@@ -1,5 +1,4 @@
 const { body } = require("express-validator");
-const User = require("../model/User");
 const registrationvalidator = [
     body("name")
         .not()

@@ -19,16 +19,15 @@ const store = new mongoStore({
 });
 // setup middlewares and view engine
 const app = express();
-
 app.set("view engine", "ejs");
 
-//session setup
+// middlewares
 
 const middleares = [
     express.static("public"),
     express.urlencoded({ extended: true }),
     express.json(),
-
+    //session setup
     session({
         secret: process.env.SECRET_KEY,
         resave: false,
