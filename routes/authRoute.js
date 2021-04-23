@@ -24,5 +24,5 @@ router.get("/auth/logout", logoutController);
 
 router.get("/dashboard", isAthenticate, dashboardGetController);
 
-router.get("/",homepageController)
+router.get("/",isUnauthenticate,homepageController)
 module.exports = router;
